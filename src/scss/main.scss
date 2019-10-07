@@ -1,0 +1,119 @@
+/**
+ * CONTENTS
+ *
+ * GLOBAL
+ * Config...............Configuration variables.
+ * Mixins...............Useful mixins.
+ * Colors...............Color variables.
+ * Typography...........Typography-related variables.
+ * Breakpoints..........Breakpoint values.
+ *
+ * GENERIC
+ * Box-sizing...........Adjust default box-sizing.
+ *
+ * BASE
+ * Document.............Base HTML style.
+ * Body.................Base body style.
+ * Headings.............H1-H6 base styles.
+ *
+ * COMPONENTS
+ * Buttons..............Button elements.
+ */
+ 
+ 
+ 
+/*------------------------------------*\
+  #Config
+\*------------------------------------*/
+ 
+$browser-context: 16;
+
+
+
+/*------------------------------------*\
+  #Mixins
+\*------------------------------------*/
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+
+
+/*------------------------------------*\
+  #Colors
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+  #Typography
+\*------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$main-font: 'Roboto', sans-serif;
+
+
+
+/*------------------------------------*\
+  #Breakpoints
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+  #Box-sizing
+\*------------------------------------*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+/*------------------------------------*\
+  #Document
+\*------------------------------------*/
+
+html {
+  font-size: (100vw/1440) * $browser-context;
+}
+
+
+
+/*------------------------------------*\
+  #Body
+\*------------------------------------*/
+
+body {
+  font-family: $main-font;
+}
+
+
+
+/*------------------------------------*\
+  #Headings
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+
+
+/*------------------------------------*\
+  #Buttons
+\*------------------------------------*/
+
+
