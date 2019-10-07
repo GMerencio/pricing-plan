@@ -48,7 +48,18 @@ $browser-context: 16;
   #Colors
 \*------------------------------------*/
 
-
+$white-lilac: #F8F9FC;
+$boulder: #7C7C7C;
+$emerald: #5CCA7A;
+$alto: #D1D1D1;
+$white: #FFF;
+$black: #000;
+$chateau-green: #3BA959;
+$emperor-faded: rgba(84,84,84,0.55);
+$grayish: rgba(0,0,0,0.48);
+$grayish-2: rgba(0,0,0,0.55);
+$grayish-3: rgba(0,0,0,0.66);
+$grayish-4: rgba(0,0,0,0.78);
 
 
 
@@ -57,6 +68,11 @@ $browser-context: 16;
 \*------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@font-face {
+    font-family: 'brandon-bold';
+    src: url('../fonts/brandon_bld.otf');
+}
 
 $main-font: 'Roboto', sans-serif;
 

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Responsive website template">
+    <meta name="description" content="Pricing plan">
     <meta name="author" content="gmerencio">
     <link rel="stylesheet" href="main.css">
     <title>Pricing Plan</title>
@@ -13,6 +13,108 @@
   
   
   <body>
+  
+    <main class="page-main">
+      
+      <h1 class="heading-main">Choose your best plan</h1>
+      
+      <!-- Pricing toggle -->
+      
+      <div class="pricing-options">
+          <p class="pricing-options__month  js-monthly-txt">Monthly</p>
+          <label class="toggle-switch">
+            <input type="checkbox" class="toggle-switch__checkbox 
+                                          js-pricing-checkbox">
+            <span class="toggle-switch__slider"></span>
+          </label>
+          <p class="pricing-options__year  js-quarterly-txt">Yearly</p>
+        </div>
+        
+        
+        <!-- Pricing plans -->
+        
+        <div class="box-container">
+        
+          <div class="box-container__item">
+            <img src="img/paper-airplane.png" alt="Paper airplane"
+            class="img-pricing">
+            <p class="txt-price  js-price">$ 00.0</p>
+            
+            <h2 class="heading-pricing">Free Plan</h2>
+            <p>For free basic product features</p>
+            
+            <ul class="list-features">
+              <li><span class="ico-check"></span> 5 GB of free space</li>
+              <li><span class="ico-check"></span> 30 days of free service</li>
+              <li class="list-features__disabled">
+              <span class="ico-check"></span> All time support service 24/7</li>
+              <li class="list-features__disabled">
+              <span class="ico-check"></span> Access to free learning
+              courses</li>
+              <li class="list-features__disabled">
+              <span class="ico-check"></span> Certificate of project
+              completion</li>
+              <li class="list-features__disabled">
+              <span class="ico-check"></span> Advance loan payment feature</li>
+            </ul>
+            
+            <button class="btn">Get Started</button>
+          </div>
+          
+          
+          <div class="box-container__item  box-container__item--featured">
+            <img src="img/airplane.png" alt="Airplane" class="img-pricing">
+            <p class="txt-price  js-price">$ 9.99</p>
+            
+            <h2 class="heading-pricing">Professional Plan</h2>
+            <p>For minimal product features</p>
+            
+            <ul class="list-features">
+              <li><span class="ico-check"></span> 5 GB of free space</li>
+              <li><span class="ico-check"></span> 30 days of free service</li>
+              <li><span class="ico-check"></span> All time support service 
+              24/7</li>
+              <li><span class="ico-check"></span> Access to free learning
+              courses</li>
+              <li class="list-features__disabled">
+              <span class="ico-check"></span> Certificate of project 
+              completion</li>
+              <li class="list-features__disabled">
+              <span class="ico-check"></span> Advance loan payment
+              feature</li>
+            </ul>
+            
+            <button class="btn  btn--special">Get Started</button>
+          </div>
+          
+          
+          <div class="box-container__item">
+            <img src="img/rocket.png" alt="Rocket" class="img-pricing">
+            <p class="txt-price  js-price">$ 14.99</p>
+            
+            <h2 class="heading-pricing  heading-pricing__special">
+            Enterprise Plan</h2>
+            <p>For full incrediable product features</p>
+            
+            <ul class="list-features">
+              <li><span class="ico-check"></span> 5 GB of free space</li>
+              <li><span class="ico-check"></span> 30 days of free service</li>
+              <li><span class="ico-check"></span> All time support service
+              24/7</li>
+              <li><span class="ico-check"></span> Access to free learning
+              courses</li>
+              <li><span class="ico-check"></span> Certificate of project
+              completion</li>
+              <li><span class="ico-check"></span> Advance loan payment
+              feature</li>
+            </ul>
+            
+            <button class="btn">Get Started</button>
+          </div>
+        
+        </div>
+      
+    </main>
     
     <!-- Javascript -->
     <script src="bundle.js"></script>
