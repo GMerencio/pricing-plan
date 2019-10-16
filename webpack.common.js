@@ -22,7 +22,7 @@ module.exports = {
        }]
      },
      {
-       test: /\.(woff|woff2|ttf|otf)$/,
+       test: /\.(woff|woff2|ttf|otf|eot)$/,
        loader: 'url-loader?limit=100000'
      }
     ]

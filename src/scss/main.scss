@@ -16,8 +16,17 @@
  * Body.................Base body style.
  * Headings.............H1-H6 base styles.
  *
+ * OBJECTS
+ * Text.................Various text styles.
+ * List.................Styles for ordered and unordered lists.
+ * Image................Various image styles.
+ *
  * COMPONENTS
  * Buttons..............Button elements.
+ * Pricing-options......Monthly/Yearly pricing options.
+ * Toggle-switch........Toggle switch component.
+ * Containers...........Generic containers used throughout the site.
+ * Icons................Icons used throughout the site.
  */
  
  
@@ -51,7 +60,9 @@ $browser-context: 16;
 $white-lilac: #F8F9FC;
 $boulder: #7C7C7C;
 $emerald: #5CCA7A;
+$emerald-2: #5DC97B;
 $alto: #D1D1D1;
+$alto-2: #DFDFDF;
 $white: #FFF;
 $black: #000;
 $chateau-green: #3BA959;
@@ -71,16 +82,23 @@ $grayish-4: rgba(0,0,0,0.78);
 
 @font-face {
     font-family: 'brandon-bold';
-    src: url('../fonts/brandon_bld.otf');
+    src: url('../font/brandon_bld.otf');
 }
 
-$main-font: 'Roboto', sans-serif;
+$main-font: 'brandon-bold', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
 
 
 
 /*------------------------------------*\
   #Breakpoints
 \*------------------------------------*/
+
+$bp-medium: em(900);
+$bp-large: em(1200);
+
+$large-screen-and-below: "(max-width: #{$bp-large})";
+$medium-screen-and-below: "(max-width: #{$bp-medium})";
 
 
 
@@ -104,6 +122,10 @@ html {
 
 html {
   font-size: (100vw/1440) * $browser-context;
+  
+  @media #{$large-screen-and-below} {
+    font-size: 14px;
+  }
 }
 
 
@@ -114,6 +136,7 @@ html {
 
 body {
   font-family: $main-font;
+  background-color: $white-lilac;
 }
 
 
@@ -129,7 +152,272 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*------------------------------------*\
+  #Text
+\*------------------------------------*/
+
+.txt-link {
+  font-size: rem(16);
+  color: $emerald;
+  font-family:  $secondary-font;
+  font-weight:  500;
+  margin-left: rem(18);
+}
+
+.txt-price {
+  margin-bottom:  rem(36);
+  margin-top:     rem(36);
+  font-size:    rem(30);
+  font-weight:  400;
+  font-family:  $main-font;
+  color: $black;
+}
+
+.txt-price--special {
+  color: $white;
+}
+
+.heading-main {
+  margin-top:     rem(107);
+  margin-bottom:  rem(72);
+  text-transform: uppercase;
+  color: $boulder;
+  font-weight:  400;
+  text-align: center;
+  
+  @media #{$medium-screen-and-below} {
+    margin-top:     0;
+    margin-bottom:  rem(25);
+  }
+}
+
+.heading-pricing {
+  text-transform: uppercase;
+  font-size:    rem(20);
+  font-weight:  400;
+  font-family:  $main-font;
+  color: $grayish;
+}
+
+.heading-pricing--special {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+
+/*------------------------------------*\
+  #List
+\*------------------------------------*/
+
+.list-features {
+  margin-top:     rem(79);
+  margin-bottom:  rem(79);
+  margin-left:    rem(45);
+  margin-right:   rem(98);
+  padding-left: 0;
+  list-style: none;
+  line-height: rem(29);
+}
+  .list-features .icon-check {
+    color: $emerald-2;
+  }
+
+  .list-features__disabled {
+    text-decoration-line: line-through;
+  }
+  
+    .list-features__disabled .icon-check {
+      color: $alto-2;
+    }
+  
+.list-features--special {
+
+}
+
+  .list-features--special .icon-check {
+    color: $white;
+  }
+
+  .list-features--special__disabled {
+    text-decoration-line: line-through;
+  }
+  
+    .list-features--special__disabled .icon-check {
+      color:  rgba(255,255,255,0.61);
+    }
+
+
+
+/*------------------------------------*\
+  #Image
+\*------------------------------------*/
+
+.img-paper {
+  position: relative;
+  width: rem(99);
+  height: rem(74);
+}
+
+.img-plane {
+  position: relative;
+  width: rem(97);
+  height: rem(97);
+  top: -#{rem(22)};
+  margin-bottom: -#{rem(22)};
+}
+
+.img-rocket {
+  position: relative;
+  width: rem(126);
+  height: rem(132);
+  top: -#{rem(33)};
+  margin-bottom: -#{rem(58)};
+}
+
+
+
+/*------------------------------------*\
   #Buttons
 \*------------------------------------*/
 
+.btn {
+  margin-bottom: rem(52);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  background-color: $emerald;
+  color: $white;
+  font-size:    rem(15);
+  font-family:  $secondary-font;
+  font-weight:  700;
+  padding-left:   rem(74);
+  padding-right:  rem(74);
+  padding-top:    rem(22);
+  padding-bottom: rem(22);
+}
 
+.btn--special {
+  background-color: $white;
+  color: $emerald;
+}
+
+
+
+/*------------------------------------*\
+  #Pricing-options
+\*------------------------------------*/
+
+.pricing-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: rem(88);
+  
+  @media #{$medium-screen-and-below} {
+    margin-bottom: rem(44);
+  }
+}
+
+  .pricing-options__txt {
+    text-transform: uppercase;
+    color: $grayish-3;
+    font-weight:  400;
+    font-size:    rem(13);
+  }
+
+
+
+/*------------------------------------*\
+  #Toggle-switch
+\*------------------------------------*/
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: rem(71);
+  height: rem(28);
+  margin-left:  rem(36);
+  margin-right: rem(44);
+}
+
+  .toggle-switch__checkbox {
+    display: none;
+  }
+  
+  .toggle-switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top:    0;
+    left:   0;
+    right:  0;
+    bottom: 0;
+    background-color: $alto;
+    transition: .4s;
+    border-radius: rem(13);
+    
+    &::before {
+      position: absolute;
+      content: "";
+      height: rem(32);
+      width: rem(32);
+      top: -#{rem(2)};
+      background-color: $emerald;
+      border: rem(4) solid #3ba959;
+      transition: .4s;
+      border-radius: 50%;
+      box-shadow: rem(1) rem(2) rem(4) rgba(62,62,62,0.5);
+    }
+  }
+
+  .toggle-switch__checkbox:checked + .toggle-switch__slider::before {
+    transform: translateX(rem(40));
+  }
+
+
+
+/*------------------------------------*\
+  #Containers
+\*------------------------------------*/
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  
+  @media #{$medium-screen-and-below} {
+    flex-direction: column;
+  }
+}
+
+  .box-container__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid rem(1) #e5e5e5;
+    background-color: $white;
+    padding-top: rem(89);
+    font-family:  $secondary-font;
+    font-size:    rem(14);
+    font-weight:  400;
+    color: $grayish-2;
+  }
+  
+  .box-container__item--featured {
+    margin-top:     -#{rem(17)};
+    margin-bottom:  -#{rem(17)};
+    padding-top: rem(89 + 17);
+    background-color: $emerald;
+    border: 0;
+    box-shadow: rem(4) rem(4) rem(14) rgba(0,0,0,0.23);
+    color: $white;
+  }
+
+
+
+/*------------------------------------*\
+  #Icons
+\*------------------------------------*/
+
+@import 'fontello';
+
+.icon-check {
+  margin-right: rem(30);
+}

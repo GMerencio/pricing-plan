@@ -1,5 +1,5 @@
-var MONTH_PRICES = ["00.0", "9.99", "14.99"];
-var YEARLY_PRICES = ["00.0", "99.99", "154.99"];
+var MONTH_PRICES = ["0.00", "9.99", "14.99"];
+var YEARLY_PRICES = ["0.00", "99.99", "154.99"];
 export var PRICING_OPTIONS = {MONTHLY: "month", YEARLY: "year"};
 
 /**
